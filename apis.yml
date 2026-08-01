@@ -1,7 +1,28 @@
 aid: poppins
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/poppins.png
 name: Poppins
-description: Poppins is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Poppins is a French digital health company that develops a clinically validated digital
+  therapeutic (DTx) for children aged 7-11 with dyslexia. Classified as a Class I medical
+  device under EU Regulation 2017/745, the mobile application delivers home-based, game-based
+  training sessions of about 20 minutes per day, 3-5 times per week, targeting phonological
+  awareness, reading speed, and visual attention span. Poppins complements in-person speech
+  therapy, supports speech-language pathologists through professional accounts, and partners
+  with insurers. The company was surfaced as a Techstars portfolio company and added to the
+  API Evangelist network. As of this enrichment pass, Poppins publishes a consumer and
+  healthcare-professional web/mobile product but no public developer API, developer portal,
+  or machine-readable API surface.
 url: https://raw.githubusercontent.com/api-evangelist/poppins/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Health
+- Digital Health
+- Digital Therapeutics
+- Medical Device
+- Education
+- Dyslexia
+- Children
+- France
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +50,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/poppins-domain-security.yml
 - type: Website
   url: https://poppins.io/
+- type: Pricing
+  url: https://poppins.io/offres
+- type: Blog
+  url: https://poppins.io/blog
+- type: TermsOfService
+  url: https://poppins.io/nos-cgv
+- type: PrivacyPolicy
+  url: https://poppins.io/politique-confidentialite
+- type: Support
+  url: https://intercom.help/poppins-faq/fr
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
