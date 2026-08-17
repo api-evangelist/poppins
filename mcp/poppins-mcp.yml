@@ -1,0 +1,50 @@
+generated: '2026-08-17'
+method: probed
+status: unconfirmed
+source: >-
+  DNS enumeration of poppins.io plus anonymous HTTP probes of the resulting hosts
+  (2026-08-17).
+summary: >-
+  Poppins ships NO confirmed MCP server. A host named mcp.poppins.io does resolve and is
+  controlled by Poppins, but it is an AWS API Gateway endpoint that answers HTTP 403
+  {"message":"Missing Authentication Token"} on every path and method probed — the response AWS
+  returns both for an unmatched route and for a route requiring an API key or IAM signature. It
+  is therefore impossible to establish anonymously whether an MCP server exists behind it. NO
+  MCPServer pointer is wired into apis.yml and none may be wired until a tools/list handshake
+  actually succeeds: an unverified endpoint recorded as an agent surface is worse than no record.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: probed
+  note: >-
+    mode is `none` because no reachable MCP server was established. The mcp.poppins.io URL is
+    deliberately left OUT of `endpoint:` and recorded only under `probe:` below, so it cannot be
+    mistaken for a verified agent surface.
+probe:
+  host: mcp.poppins.io
+  dns: [13.39.74.55, 15.188.106.74, 13.37.126.50]
+  infrastructure: AWS API Gateway (eu-west-3 address space, consistent with the rest of the Poppins stack)
+  attempts:
+  - {method: POST, url: 'https://mcp.poppins.io/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/prod/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/dev/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/default/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/v1/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/api/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: POST, url: 'https://mcp.poppins.io/staging/mcp', body: 'jsonrpc 2.0 tools/list', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: GET, url: 'https://mcp.poppins.io/openapi.json', status: 403, response: '{"message":"Missing Authentication Token"}'}
+  - {method: GET, url: 'https://mcp.poppins.io/.well-known/oauth-protected-resource', status: 403, response: '{"message":"Missing Authentication Token"}'}
+tools: []
+derivation:
+  possible: false
+  reason: >-
+    A candidate tool list cannot be derived either: Poppins publishes no OpenAPI, so there are no
+    operations to project into tools.
+next_round:
+  - Re-probe mcp.poppins.io — if Poppins later publishes documentation naming it, the handshake
+    can be confirmed and a real MCPServer pointer wired.
+  - Ask Poppins directly what mcp.poppins.io serves; the honest answer belongs in this file.

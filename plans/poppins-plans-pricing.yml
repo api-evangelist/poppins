@@ -1,0 +1,76 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.poppins.io/offres
+corroborating_source: https://www.poppins.io/llm.txt
+currency: EUR
+billing_note: >-
+  Poppins publishes consumer product subscription pricing only — there is no API plan, no
+  developer tier, and no metered/usage pricing, because Poppins publishes no public API. All
+  three tiers grant the same product; they differ only by commitment length and therefore monthly
+  price. Prices are billed monthly for the duration of the commitment; the undiscounted reference
+  price is EUR 39/month.
+plan_count: 3
+plans:
+- name: 12 mois
+  label: Best price
+  price: 26
+  currency: EUR
+  period: month
+  commitment_months: 12
+  list_price: 39
+  savings: 156
+  savings_currency: EUR
+  trial: {days: 7, free: true}
+  included:
+  - Full Poppins application (CE-marked Class I medical device)
+  - Progress-tracking dashboard for parents
+  - Regular telephone follow-up
+  - Dedicated support team
+  - Club Poppins community access
+- name: 6 mois
+  price: 30
+  currency: EUR
+  period: month
+  commitment_months: 6
+  list_price: 39
+  savings: 54
+  savings_currency: EUR
+  trial: {days: 7, free: true}
+  included:
+  - Full Poppins application (CE-marked Class I medical device)
+  - Progress-tracking dashboard for parents
+  - Regular telephone follow-up
+  - Dedicated support team
+  - Club Poppins community access
+- name: 3 mois
+  price: 39
+  currency: EUR
+  period: month
+  commitment_months: 3
+  trial: {days: 7, free: true}
+  included:
+  - Full Poppins application (CE-marked Class I medical device)
+  - Progress-tracking dashboard for parents
+  - Regular telephone follow-up
+  - Dedicated support team
+  - Club Poppins community access
+terms:
+- 7-day free trial; charged at the end of the trial unless cancelled during it.
+- Commitment for the selected term (3, 6 or 12 months); cancellation only at the end of the term.
+- After the commitment, automatic monthly renewal at the same price, cancellable with 48 hours notice before each billing date.
+- Application distributed on the French Apple App Store and Google Play stores only.
+third_party_coverage:
+  note: >-
+    Poppins is also distributed free of charge to members of partner French health insurers /
+    mutuelles via activation codes, and separately provides free demo licences to
+    speech-language pathologists. Both are access routes rather than published price tiers.
+  partners:
+  - {name: Abeille Assurances, free_access_months: 3}
+  - {name: Allianz France, free_access_months: 3}
+  - {name: Groupe Pasteur Mutualité, free_access_months: 6}
+  - {name: KERIALIS, free_access_months: 6}
+  - {name: ProBTP (incl. Prodigeo, SAF BTP), free_access_months: 6}
+  professional_access:
+    audience: speech-language pathologists (orthophonistes)
+    route: demo licence request + weekly presentation webinar
+    url: https://www.poppins.io/professionnel-de-sante

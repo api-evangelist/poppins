@@ -1,0 +1,69 @@
+generated: '2026-08-17'
+method: probed
+source: >-
+  Anonymous HTTPS probes of the /.well-known/ discovery surface on every Poppins-controlled
+  host found in apis.yml and via DNS enumeration of poppins.io.
+result: no-hits
+note: >-
+  Every /.well-known/ path probed either 404s or returns an HTML shell. The marketing site
+  (www.poppins.io, Webflow) answers "Invalid .well-known request" with HTTP 404 for the whole
+  namespace. The customer application host (app.poppins.io) is a single-page app whose catch-all
+  answers HTTP 200 with the same React HTML document for EVERY /.well-known/* path, including
+  /openapi.json — that is an SPA catch-all, not a served document, and it is recorded here as a
+  MISS. No WellKnown or SecurityTxt pointer is wired in apis.yml, because Poppins does not serve
+  any well-known document.
+hosts:
+- host: https://www.poppins.io
+  role: website
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://app.poppins.io
+  role: customer application (SPA)
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 200, document: false, content_type: text/html, note: SPA catch-all HTML shell — not a document}
+  - {path: /.well-known/api-catalog, status: 200, document: false, content_type: text/html, note: SPA catch-all HTML shell — not a document}
+  - {path: /.well-known/ai-plugin.json, status: 200, document: false, content_type: text/html, note: SPA catch-all HTML shell — not a document}
+  - {path: /.well-known/agent-card.json, status: 200, document: false, content_type: text/html, note: SPA catch-all HTML shell — not a document}
+  - {path: /.well-known/agent.json, status: 200, document: false, content_type: text/html, note: SPA catch-all HTML shell — not a document}
+- host: https://info.poppins.io
+  role: marketing landing pages
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://mcp.poppins.io
+  role: AWS API Gateway host (purpose unconfirmed — see mcp/poppins-mcp.yml)
+  documents:
+  - {path: /.well-known/oauth-authorization-server, status: 403, note: 'AWS API Gateway {"message":"Missing Authentication Token"}'}
+  - {path: /.well-known/oauth-protected-resource, status: 403, note: 'AWS API Gateway {"message":"Missing Authentication Token"}'}
+  - {path: /.well-known/agent-card.json, status: 403, note: 'AWS API Gateway {"message":"Missing Authentication Token"}'}
+  - {path: /.well-known/agent.json, status: 403, note: 'AWS API Gateway {"message":"Missing Authentication Token"}'}
+- host: https://tagging.poppins.io
+  role: Google Tag Manager server-side container
+  documents:
+  - {path: /.well-known/security.txt, status: 400}
+  - {path: /.well-known/agent-card.json, status: 400}
+  - {path: /.well-known/agent.json, status: 400}
+adjacent_probes:
+  note: >-
+    Non-well-known discovery paths probed in the same pass, recorded here so a later round does
+    not repeat them.
+  paths:
+  - {url: 'https://www.poppins.io/openapi.json', status: 404}
+  - {url: 'https://www.poppins.io/swagger.json', status: 404}
+  - {url: 'https://www.poppins.io/api-docs', status: 404}
+  - {url: 'https://www.poppins.io/api', status: 404}
+  - {url: 'https://www.poppins.io/llms.txt', status: 404}
+  - {url: 'https://www.poppins.io/llm.txt', status: 200, note: 'REAL HIT — provider-published agent/LLM brief, saved verbatim to llms/poppins-llms.txt'}
+  - {url: 'https://www.poppins.io/robots.txt', status: 200, note: 'allow-lists GPTBot, ChatGPT-User, CCBot, anthropic-ai, Claude-Web; advertises /llm.txt'}
+  - {url: 'https://www.poppins.io/sitemap.xml', status: 200, note: '~200 marketing/blog URLs, no developer or API path'}

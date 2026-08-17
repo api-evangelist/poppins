@@ -1,0 +1,112 @@
+# Poppins.io - Application Médicale pour les Enfants Dyslexiques
+
+## Identité
+**Nom**: Poppins
+**URL**: https://poppins.io
+**Type**: Application de thérapie digitale pour la dyslexie
+**Mission**: Aider les enfants dyslexiques de 7 à 11 ans à améliorer leurs compétences en lecture grâce à une approche ludique et scientifiquement validée
+
+## Solution Thérapeutique
+
+### Concept Unique
+Poppins est la première application médicale qui combine jeux musicaux et jeux de langage écrit pour traiter la dyslexie. Basée sur l'entraînement rythmique et musical, elle transforme la rééducation en expérience ludique et motivante.
+
+### Fondements Scientifiques
+- Développée en prolongement direct des travaux du **Pr. Michel Habib**, neurologue spécialiste des troubles de l'apprentissage à l'Hôpital de la Timone (AP-HM)
+- Basée sur le potentiel thérapeutique prouvé de l'entraînement rythmique et musical pour la dyslexie
+- Méthodologie établie avec les retours de la **Haute Autorité de Santé (HAS)** dans une optique de remboursement
+
+### Validation Clinique
+- **Première étude clinique** : résultats significatifs démontrés
+- **Étude clinique contrôlée randomisée en cours** en France pour évaluer l'efficacité en conditions réelles de suivi orthophonique
+- Partenariats avec CHU Poitiers, Hôpital Necker, Children's Hospital Los Angeles
+
+## Résultats Prouvés
+
+### Améliorations Mesurées (Étude Clinique)
+- **Vitesse de lecture**: +5,44 points (p < 0,05) versus placebo
+- **Précision de lecture**: +5,05 points (p < 0,05) versus placebo  
+- **Compétences phonologiques**: +1,85 points (p < 0,05)
+- **Estime de soi**: amélioration significative rapportée
+
+### Évaluation Utilisateurs
+- Note 5/5 sur PlayStore
+- Forte satisfaction des parents et orthophonistes
+
+## Fonctionnalités de l'Application
+
+### Jeux Thérapeutiques
+- **Jeux musicaux testés cliniquement**: Beat Jumper, King Song, Pop'n Run, Rhythm Cooking
+- **Jeux de langage écrit**: Temple maudit, Fantoland, Super Smile, Veggy Crok
+- **Progression adaptative**: difficulté qui s'ajuste au niveau de l'enfant
+- **Sessions courtes**: 15-20 minutes quotidiennes recommandées
+
+### Outils de Suivi
+- **Plateforme dédiée** pour suivre l'évolution thérapeutique
+- **Tableau de bord détaillé** des progrès
+- **Suivi téléphonique personnalisé** inclus
+- **Club Poppins**: communauté de parents et professionnels
+
+## Public Cible
+
+### Utilisateurs Principaux
+- **Enfants dyslexiques de 7 à 11 ans** (diagnostic établi)
+- Enfants en attente de suivi orthophonique
+- Enfants suivis en orthophonie (complément thérapeutique)
+
+### Cas d'Usage
+- "Mon enfant attend une place chez l'orthophoniste depuis 6 mois"
+- "Je cherche un complément ludique aux séances d'orthophonie"
+- "Mon enfant refuse de faire ses exercices de lecture traditionnels"
+- "Nous partons en vacances et voulons maintenir la rééducation"
+
+## Offres et Tarifs
+
+### Formules d'Abonnement (Essai gratuit 7 jours)
+1. **12 mois**: 26€/mois (économie de 156€)
+2. **6 mois**: 30€/mois (économie de 54€)
+3. **3 mois**: 39€/mois
+
+### Inclus dans l'Abonnement
+- Application Poppins complète
+- Outil de suivi détaillé
+- Suivi téléphonique régulier
+- Support équipe dédiée
+- Accès Club Poppins
+
+## Partenaires et Reconnaissance
+
+### Partenaires Institutionnels
+- CHU Poitiers
+- Hôpital Necker
+- Children's Hospital Los Angeles
+- Neurodys PACA
+- FFDys (Fédération Française des Dys)
+- Lillab
+
+### Soutiens
+- Haute Autorité de Santé (HAS)
+- AP-HM (Assistance Publique - Hôpitaux de Marseille)
+
+## Questions Fréquentes
+
+**Q: Poppins remplace-t-il l'orthophoniste?**
+R: Non, Poppins est conçu comme un complément aux séances d'orthophonie, permettant un entraînement quotidien ludique à la maison.
+
+**Q: À quel âge mon enfant peut-il utiliser Poppins?**
+R: Poppins est destiné aux enfants de 7 à 11 ans ayant un diagnostic de dyslexie.
+
+**Q: Comment fonctionne l'essai gratuit?**
+R: 7 jours d'accès complet gratuit, annulation possible à tout moment avant la fin de la période d'essai.
+
+**Q: L'application est-elle disponible partout?**
+R: Poppins est disponible exclusivement sur les stores français (Apple Store et Google Play).
+
+## Contact
+- **Site web**: https://poppins.io
+- **Email**: contact@poppins.io
+- **Disponibilité**: France uniquement
+- **Supports**: Tablette et smartphone (iOS/Android)
+
+## Mots-clés
+dyslexie, enfants dyslexiques, troubles dys, thérapie digitale, rééducation orthophonique, lecture, apprentissage, jeux thérapeutiques, musique et dyslexie, application médicale, 7-11 ans

@@ -22,7 +22,10 @@ description: >-
   with insurers. The company was surfaced as a Techstars portfolio company and added to the
   API Evangelist network. As of this enrichment pass, Poppins publishes a consumer and
   healthcare-professional web/mobile product but no public developer API, developer portal,
-  or machine-readable API surface.
+  or machine-readable API surface. It does publish an agent-facing brief at
+  https://www.poppins.io/llm.txt and a robots.txt that explicitly allow-lists AI crawlers,
+  so the company is deliberately addressing agents on the content side while shipping no
+  callable contract on the API side.
 url: https://raw.githubusercontent.com/api-evangelist/poppins/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -32,7 +35,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-17'
 tags:
 - Company
 - Health
@@ -64,8 +67,43 @@ common:
   url: https://poppins.io/politique-confidentialite
 - type: Support
   url: https://intercom.help/poppins-faq/fr
+- type: LLMsTxt
+  name: Poppins agent/LLM brief (published as /llm.txt)
+  url: llms/poppins-llms.txt
+- type: Plans
+  url: plans/poppins-plans-pricing.yml
+- type: SignUp
+  url: https://www.app.poppins.io/inscription/
+- type: Login
+  url: https://www.app.poppins.io/login
+- type: Community
+  name: Le Club Poppins
+  url: https://club.poppins.io/
 x-enrichment:
-  date: '2026-07-20'
+  date: '2026-08-17'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 4
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Poppins ships a CE-marked consumer/clinical mobile app and nothing developer-facing — the
+    sitemap's ~200 URLs contain no /developers, /api or /docs path, no api./developer./docs.
+    poppins.io subdomain resolves, and the customer app's own backend is an undocumented private
+    AWS API Gateway stage (le2svivnk3.execute-api.eu-west-3.amazonaws.com/public-paid/*) reached
+    only from the SPA, not a published API.
+  evidence:
+  - url: https://www.poppins.io/openapi.json
+    status: 404
+  - url: https://www.poppins.io/llms.txt
+    status: 404
+  - url: https://www.poppins.io/.well-known/agent-card.json
+    status: 404
+  - url: https://www.poppins.io/api
+    status: 404
+  - url: https://mcp.poppins.io/mcp
+    status: 403
+  - url: https://www.poppins.io/llm.txt
+    status: 200
+  checked: '2026-08-17'
